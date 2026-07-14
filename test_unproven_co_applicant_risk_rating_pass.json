@@ -1,0 +1,91 @@
+{
+  "request": {
+    "creditFacilityLimit": 5000,
+    "applicationDecisionSubmissions": 0,
+    "connectionAutoApprovalExposure": 5000,
+    "businessPartners": [
+      {
+        "businessPartnerId": "10000000-0000-0000-0000-000000000001",
+        "applicationPartyRole": "BORROWER1",
+        "businessPartnerType": "INDIVIDUAL",
+        "repaymentHistoryRatingType": "UNPROVEN",
+        "consecutiveMonthsOfRepaymentHistory": 12,
+        "creditBureauScore": 800,
+        "autoAdjudicationAccumulatedExposure": 150000.00,
+        "autoAdjudicationAccumulatedConnectionExposure": 5000,
+        "repaymentHistoryRating": 40,
+        "clearedCriminalRecordCheck": true, "clearedLegalActionCheck": true, "clearedBankruptcyCheck": true,
+        "arrearsGreaterThanNinetyDaysCount": 0, "arrearsSixtyToNinetyDaysCount": 0, "arrearsThirtyToSixtyDaysCount": 0,
+        "thirtyToSixtyDaysPastDueCount": 0,
+        "creditBureauEventId": "d620585d-5f3e-425b-9197-94569926e73a",
+        "financialStatementId": "d620585d-5f3e-425b-9197-94569926e73b",
+        "incomeGrossOffFarm": 50000.00, "incomeOther": 50000.00, "incomeRevenue": 50000.00,
+        "netWorthCurrentAssets": 50000.00, "netWorthCurrentLiabilities": 500.00,
+        "netWorthTermAssets": 50000.00, "netWorthTermLiabilities": 500.00,
+        "netWorthShareholderAndSubordinatedLoans": 0.00,
+        "activeArrears": false, "onlyApproveAtCreditRisk": false, "paymentDeferral": false,
+        "recovery": false, "specialCredit": false, "enhancedDueDiligence": false,
+        "bankruptcyLawsuitStatus": "COMPLETE", "criminalRecord": false, "bankruptcy": false, "legalAction": false,
+        "yearBusinessStarted": 2002,
+        "transUnionAttributeAI143": 185, "transUnionAttributeAI72": 0, "transUnionAttributeAM41": 0,
+        "transUnionAttributeAT87": 185, "transUnionAttributeBC329": 0, "transUnionAttributeBR185": 185,
+        "transUnionAttributeBR94": 185, "transUnionAttributeFR21": 0, "transUnionAttributeGO143": 185,
+        "transUnionAttributeRE72": 185, "transUnionAttributeTRV01": 0, "transUnionAttributeAT76": 0,
+        "transUnionAttributeGO14": 0, "transUnionAttributeAT01": 0, "transUnionAttributeAI01": 0,
+        "transUnionAttributeBC01": 1, "transUnionAttributeBR01": 1, "transUnionAttributeBR02": 1,
+        "transUnionAttributeAM02": 1, "transUnionAttributeFR01": 1, "transUnionAttributeGO05": 1,
+        "transUnionAttributeRE01": 1, "transUnionAttributeGO86": 0, "transUnionAttributeCU305": false,
+        "equifaxCDS2AttributeClass": null, "equifaxCDS2AttributeChargeOffCount": null,
+        "equifaxCDS2AttributeCollectionAmount": null, "equifaxCDS2AttributeLegalSuitAmount": null,
+        "equifaxCDS2AttributeJudgementAmount": null, "equifaxCDS2AttributeCr90Period3DelinquencyAmount": null
+      },
+      {
+        "businessPartnerId": "20000000-0000-0000-0000-000000000002",
+        "applicationPartyRole": "BORROWER2",
+        "businessPartnerType": "INDIVIDUAL",
+        "repaymentHistoryRatingType": "UNPROVEN",
+        "consecutiveMonthsOfRepaymentHistory": 12,
+        "creditBureauScore": 650,
+        "autoAdjudicationAccumulatedExposure": 150000.00,
+        "autoAdjudicationAccumulatedConnectionExposure": 5000,
+        "repaymentHistoryRating": 40,
+        "clearedCriminalRecordCheck": true, "clearedLegalActionCheck": true, "clearedBankruptcyCheck": true,
+        "arrearsGreaterThanNinetyDaysCount": 0, "arrearsSixtyToNinetyDaysCount": 0, "arrearsThirtyToSixtyDaysCount": 0,
+        "thirtyToSixtyDaysPastDueCount": 0,
+        "creditBureauEventId": "d620585d-5f3e-425b-9197-94569926e73c",
+        "financialStatementId": "d620585d-5f3e-425b-9197-94569926e73d",
+        "incomeGrossOffFarm": 50000.00, "incomeOther": 50000.00, "incomeRevenue": 50000.00,
+        "netWorthCurrentAssets": 50000.00, "netWorthCurrentLiabilities": 500.00,
+        "netWorthTermAssets": 50000.00, "netWorthTermLiabilities": 500.00,
+        "netWorthShareholderAndSubordinatedLoans": 0.00,
+        "activeArrears": false, "onlyApproveAtCreditRisk": false, "paymentDeferral": false,
+        "recovery": false, "specialCredit": false, "enhancedDueDiligence": false,
+        "bankruptcyLawsuitStatus": "COMPLETE", "criminalRecord": false, "bankruptcy": false, "legalAction": false,
+        "yearBusinessStarted": 2005,
+        "transUnionAttributeAI143": 170, "transUnionAttributeAI72": 0, "transUnionAttributeAM41": 0,
+        "transUnionAttributeAT87": 170, "transUnionAttributeBC329": 0, "transUnionAttributeBR185": 170,
+        "transUnionAttributeBR94": 170, "transUnionAttributeFR21": 0, "transUnionAttributeGO143": 170,
+        "transUnionAttributeRE72": 170, "transUnionAttributeTRV01": 0, "transUnionAttributeAT76": 0,
+        "transUnionAttributeGO14": 0, "transUnionAttributeAT01": 0, "transUnionAttributeAI01": 0,
+        "transUnionAttributeBC01": 1, "transUnionAttributeBR01": 1, "transUnionAttributeBR02": 1,
+        "transUnionAttributeAM02": 1, "transUnionAttributeFR01": 1, "transUnionAttributeGO05": 1,
+        "transUnionAttributeRE01": 1, "transUnionAttributeGO86": 0, "transUnionAttributeCU305": false,
+        "equifaxCDS2AttributeClass": null, "equifaxCDS2AttributeChargeOffCount": null,
+        "equifaxCDS2AttributeCollectionAmount": null, "equifaxCDS2AttributeLegalSuitAmount": null,
+        "equifaxCDS2AttributeJudgementAmount": null, "equifaxCDS2AttributeCr90Period3DelinquencyAmount": null
+      }
+    ]
+  },
+  "response": {
+    "applicationRiskRating": "A4",
+    "applicationDecision": "SYSTEM_APPROVED",
+    "applicationBusinessPartnerId": "10000000-0000-0000-0000-000000000001",
+    "parties": [
+      {"businessPartnerId": "10000000-0000-0000-0000-000000000001", "riskRating": "A4"},
+      {"businessPartnerId": "20000000-0000-0000-0000-000000000002", "riskRating": "A1"}
+    ],
+    "rules": [
+      {"ruleCode": "CO_APPLICANT_RISK_RATING", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW", "note": "Co-applicant rating A1 is above minimum threshold D2"}
+    ]
+  }
+}
