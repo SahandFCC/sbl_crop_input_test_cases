@@ -1,0 +1,17 @@
+{
+  "request": {
+    "creditFacilityLimit": 5000,
+    "applicationDecisionSubmissions": 0,
+    "connectionAutoApprovalExposure": 5000,
+    "businessPartners": [
+      {"businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6", "applicationPartyRole": "BORROWER1", "incomeRevenue": 0.00, "incomeGrossOffFarm": 0.00, "incomeOther": 0.00, "netWorthCurrentAssets": 0.00, "netWorthCurrentLiabilities": 5000.00, "netWorthTermAssets": 0.00, "netWorthTermLiabilities": 0.00, "netWorthShareholderAndSubordinatedLoans": 0.00}
+    ]
+  },
+  "response": {
+    "applicationDecision": "TBD_PENDING_BA_CLARIFICATION",
+    "applicationBusinessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
+    "rules": [
+      {"ruleCode": "EXPOSURE_AND_CURRENT_RATIO_THRESHOLD", "result": "TBD", "decisionOnFail": "MANUAL_REVIEW", "note": "AMBIGUOUS CASE - combined income (numerator) = $0 but liabilities (denominator) > $0. Rule 6F spec reads ambiguously: unclear whether this should FAIL as a divide-by-zero-adjacent edge case, or PASS/FAIL based on strict ratio math (0 / 5000 = 0, which is below any reasonable current ratio threshold). This test is a PLACEHOLDER pending clarification from BA/spec owner on expected behavior before assigning a definitive expected response."}
+    ]
+  }
+}
