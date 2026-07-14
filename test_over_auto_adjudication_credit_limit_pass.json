@@ -1,0 +1,17 @@
+{
+  "request": {
+    "creditFacilityLimit": 100000,
+    "applicationDecisionSubmissions": 0,
+    "connectionAutoApprovalExposure": 5000,
+    "businessPartners": [
+      {"businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6", "applicationPartyRole": "BORROWER1"}
+    ]
+  },
+  "response": {
+    "applicationDecision": "SYSTEM_APPROVED",
+    "applicationBusinessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
+    "rules": [
+      {"ruleCode": "OVER_AUTO_ADJUDICATION_CREDIT_LIMIT", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW", "note": "creditFacilityLimit = 100000 (< 500000)"}
+    ]
+  }
+}

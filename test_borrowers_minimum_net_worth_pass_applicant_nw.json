@@ -1,0 +1,17 @@
+{
+  "request": {
+    "creditFacilityLimit": 5000,
+    "applicationDecisionSubmissions": 0,
+    "connectionAutoApprovalExposure": 5000,
+    "businessPartners": [
+      {"businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6", "applicationPartyRole": "BORROWER1", "netWorthCurrentAssets": 50000.00, "netWorthCurrentLiabilities": 500.00, "netWorthTermAssets": 50000.00, "netWorthTermLiabilities": 500.00, "netWorthShareholderAndSubordinatedLoans": 0.00}
+    ]
+  },
+  "response": {
+    "applicationDecision": "SYSTEM_APPROVED",
+    "applicationBusinessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
+    "rules": [
+      {"ruleCode": "BORROWERS_MINIMUM_NET_WORTH", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW", "note": "Applicant NW = 99000 (>= $0)"}
+    ]
+  }
+}

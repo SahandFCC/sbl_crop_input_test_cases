@@ -1,0 +1,17 @@
+{
+  "request": {
+    "creditFacilityLimit": 5000,
+    "applicationDecisionSubmissions": 0,
+    "connectionAutoApprovalExposure": 5000,
+    "businessPartners": [
+      {"businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6", "applicationPartyRole": "BORROWER1", "netWorthCurrentAssets": 0.00, "netWorthCurrentLiabilities": 0.00, "netWorthTermAssets": 0.00, "netWorthTermLiabilities": 0.00, "netWorthShareholderAndSubordinatedLoans": 0.00, "appscardNetWorthForTest": -5000.00}
+    ]
+  },
+  "response": {
+    "applicationDecision": "MANUAL_REVIEW",
+    "applicationBusinessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
+    "rules": [
+      {"ruleCode": "BORROWERS_MINIMUM_NET_WORTH", "result": "FAIL", "decisionOnFail": "MANUAL_REVIEW", "note": "All applicant NW components = $0, fallback to Appscard NW = -5000 (< $0)"}
+    ]
+  }
+}
