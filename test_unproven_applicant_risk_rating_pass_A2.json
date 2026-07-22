@@ -3,6 +3,7 @@
     "creditFacilityLimit": 5000,
     "applicationDecisionSubmissions": 0,
     "connectionAutoApprovalExposure": 5000,
+    "decisionEngineStrategy": "INTERNAL_INPUT_FINANCING",
     "businessPartners": [
       {
         "businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
@@ -76,20 +77,361 @@
     ]
   },
   "response": {
-    "applicationRiskRating": "A4",
-    "applicationDecision": "SYSTEM_APPROVED",
+     "strategy": "INTERNAL_INPUT_FINANCING",
+    "strategyVersion": "1.13.4",
+    "applicationRiskRating": "D1",
+    "applicationDecision": "MANUAL_REVIEW",
     "applicationBusinessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
     "parties": [
-      {"businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6", "riskRating": "A4"}
+        {
+            "businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
+            "fccInternalModelScore": 111,
+            "riskRating": "D1",
+            "rules": [
+                {
+                    "ruleCode": "SEVERE_DELINQUENCY_ABOVE_THRESHOLD",
+                    "result": "SKIP",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit bureau indicates delinquencies over acceptable threshold.",
+                    "frenchDescription": "Le dossier de vérification du crédit indique des défauts de paiement au-delà du seuil acceptable.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "MINIMUM_NET_WORTH",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Applicant's net worth is less than $0.",
+                    "frenchDescription": "La valeur nette du demandeur est inférieure à 0 $.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "BANKRUPTCY_FORECLOSURE_JUDGEMENT_COLLECT_LAWSUIT",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Bankruptcy, foreclosure, judgement/active collections, lawsuit, or derogatory trades/public records",
+                    "frenchDescription": "Faillite, forclusion, jugement/recouvrement actif, poursuite, ou élément négatif déclaré sur un compte/dans les dossiers publics",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "DELINQUENT_ON_TRADE_LINES",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Applicant's credit bureau indicates delinquency.",
+                    "frenchDescription": "Le dossier de vérification du crédit du demandeur indique un défaut de paiement.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "NO_TRADE_LINES",
+                    "result": "FAIL",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Applicant has no trade lines on credit bureau",
+                    "frenchDescription": "Le demandeur n’a pas de comptes de crédit dans son dossier de vérification du crédit.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "LESS_THAN_TWO_YEARS_IN_BUSINESS",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Borrower's business start date is less than 2 years.",
+                    "frenchDescription": "L’emprunteur a établi son entreprise il y a moins de deux ans.",
+                    "ruleVersion": "1.0.3"
+                },
+                {
+                    "ruleCode": "ACTIVE_ARREARS",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Arrears",
+                    "frenchDescription": "Montants en souffrance",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "PAYMENT_DEFERRAL",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Active payment deferral(s)",
+                    "frenchDescription": "Report(s) de paiement actif(s)",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "OVER_AUTO_ADJUDICATION_EXPOSURE_LIMIT",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Auto-approval connection exposure has been exceeded.",
+                    "frenchDescription": "La limite du risque d’interdépendance par approbation automatique a été dépassée.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "CRIMINAL_RECORD",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Criminal record",
+                    "frenchDescription": "Casier judiciaire",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "RECOVERY",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Recovery",
+                    "frenchDescription": "Recouvrement",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "ENHANCED_DUE_DILIGENCE",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Enhanced due diligence",
+                    "frenchDescription": "Diligence raisonnable accrue",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "SPECIAL_CREDIT",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Special credit",
+                    "frenchDescription": "Crédit spécial",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "ONLY_APPROVE_AT_CREDIT_RISK",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Only Approve at Credit Risk",
+                    "frenchDescription": "Approbation par le Risque de crédit seulement",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "RISK_CLASS_BELOW_THRESHOLD",
+                    "result": "SKIP",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit bureau Risk Class is below acceptable threshold.",
+                    "frenchDescription": "Le pointage de risque du dossier de vérification du crédit est inférieur au seuil acceptable.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "EMPTY_CREDIT_BUREAU_REPORT",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit check not found.",
+                    "frenchDescription": "Vérification de crédit introuvable",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "WRITE_OFFS",
+                    "result": "SKIP",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit bureau has write-offs.",
+                    "frenchDescription": "Le dossier de vérification du crédit indique que des dettes de l’entreprise ont été radiées.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "JUDGEMENTS_LEGAL_SUITS_OR_COLLECTIONS",
+                    "result": "SKIP",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit bureau has collections, judgements or legal suits.",
+                    "frenchDescription": "Le dossier de vérification du crédit indique des recouvrements, des jugements ou des poursuites en justice.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "FRAUD_WARNING",
+                    "result": "PASS",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Credit bureau indicates fraud",
+                    "frenchDescription": "Le dossier de vérification du crédit fait état d’une fraude.",
+                    "ruleVersion": "1.0.2"
+                },
+                {
+                    "ruleCode": "NEW_TO_CREDIT",
+                    "result": "FAIL",
+                    "decisionOnFail": "MANUAL_REVIEW",
+                    "englishDescription": "Applicant's credit bureau is newer than 12 months.",
+                    "frenchDescription": "Le dossier de vérification du crédit du demandeur a un historique de moins de 12 mois.",
+                    "ruleVersion": "1.0.2"
+                }
+            ],
+            "scorecardModelInputs": [
+                {
+                    "key": "AI01",
+                    "value": "0"
+                },
+                {
+                    "key": "AI143",
+                    "value": "185"
+                },
+                {
+                    "key": "AT01",
+                    "value": "0"
+                },
+                {
+                    "key": "AT87",
+                    "value": "185"
+                },
+                {
+                    "key": "BR01",
+                    "value": "1"
+                },
+                {
+                    "key": "BR02",
+                    "value": "1"
+                },
+                {
+                    "key": "BR185",
+                    "value": "185"
+                },
+                {
+                    "key": "BR94",
+                    "value": "185"
+                },
+                {
+                    "key": "GO05",
+                    "value": "1"
+                },
+                {
+                    "key": "GO143",
+                    "value": "185"
+                },
+                {
+                    "key": "RE01",
+                    "value": "1"
+                },
+                {
+                    "key": "RE72",
+                    "value": "185"
+                }
+            ],
+            "scorecardModelIntermediates": [
+                {
+                    "key": "GRP_AI143",
+                    "value": "1"
+                },
+                {
+                    "key": "GRP_AT87",
+                    "value": "1"
+                },
+                {
+                    "key": "GRP_BR185",
+                    "value": "3"
+                },
+                {
+                    "key": "GRP_BR94",
+                    "value": "3"
+                },
+                {
+                    "key": "GRP_GO143",
+                    "value": "3"
+                },
+                {
+                    "key": "GRP_RE72",
+                    "value": "4"
+                },
+                {
+                    "key": "SCR_AI143",
+                    "value": "34"
+                },
+                {
+                    "key": "SCR_AT87",
+                    "value": "30"
+                },
+                {
+                    "key": "SCR_BR185",
+                    "value": "5"
+                },
+                {
+                    "key": "SCR_BR94",
+                    "value": "16"
+                },
+                {
+                    "key": "SCR_GO143",
+                    "value": "21"
+                },
+                {
+                    "key": "SCR_RE72",
+                    "value": "5"
+                },
+                {
+                    "key": "TRANSFORMED_AI143",
+                    "value": "-999"
+                },
+                {
+                    "key": "TRANSFORMED_AT87",
+                    "value": "-999"
+                },
+                {
+                    "key": "TRANSFORMED_BR185",
+                    "value": "185"
+                },
+                {
+                    "key": "TRANSFORMED_BR94",
+                    "value": "185"
+                },
+                {
+                    "key": "TRANSFORMED_GO143",
+                    "value": "185"
+                },
+                {
+                    "key": "TRANSFORMED_RE72",
+                    "value": "185"
+                }
+            ]
+        }
     ],
     "rules": [
-      {"ruleCode": "APPLICANT_RISK_RATING", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"},
-      {"ruleCode": "CO_APPLICANT_RISK_RATING", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"},
-      {"ruleCode": "DECLINED_APPLICANT_RISK_RATING", "result": "PASS", "decisionOnFail": "SYSTEM_DECLINED"},
-      {"ruleCode": "APPLICATION_DECISION_LIMIT", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"},
-      {"ruleCode": "BORROWERS_MINIMUM_NET_WORTH", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"},
-      {"ruleCode": "EXPOSURE_AND_CURRENT_RATIO_THRESHOLD", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"},
-      {"ruleCode": "OVER_AUTO_ADJUDICATION_CREDIT_LIMIT", "result": "PASS", "decisionOnFail": "MANUAL_REVIEW"}
+        {
+            "ruleCode": "APPLICANT_RISK_RATING",
+            "result": "FAIL",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "Applicant's risk rating is less than A2.",
+            "frenchDescription": "Le classement du risque du demandeur est inférieur à A2.",
+            "ruleVersion": "1.0.2"
+        },
+        {
+            "ruleCode": "DECLINED_APPLICANT_RISK_RATING",
+            "result": "PASS",
+            "decisionOnFail": "SYSTEM_DECLINED",
+            "englishDescription": "Best risk rating is D2.",
+            "frenchDescription": "Le meilleur classement du risque est D2.",
+            "ruleVersion": "1.0.2"
+        },
+        {
+            "ruleCode": "BORROWERS_MINIMUM_NET_WORTH",
+            "result": "SKIP",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "Borrowers' net worth is less than $0.",
+            "frenchDescription": "La valeur nette des emprunteurs est inférieure à 0 $.",
+            "ruleVersion": "1.0.2"
+        },
+        {
+            "ruleCode": "APPLICATION_DECISION_LIMIT",
+            "result": "PASS",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "Risk rating has been reset",
+            "frenchDescription": "Le classement du risque a été réinitialisé.",
+            "ruleVersion": "1.0.2"
+        },
+        {
+            "ruleCode": "CO_APPLICANT_RISK_RATING",
+            "result": "PASS",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "One or more risk ratings are D2.",
+            "frenchDescription": "Un ou plusieurs classements du risque correspondent à D2.",
+            "ruleVersion": "1.0.2"
+        },
+        {
+            "ruleCode": "EXPOSURE_AND_CURRENT_RATIO_THRESHOLD",
+            "result": "PASS",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "Borrowers' debt exposure ratio and current ratio are outside allowable thresholds.",
+            "frenchDescription": "Le ratio d'endettement et le ratio de fonds de roulement des emprunteurs sont au-delà des seuils admissibles.",
+            "ruleVersion": "2.0.2"
+        },
+        {
+            "ruleCode": "OVER_AUTO_ADJUDICATION_CREDIT_LIMIT",
+            "result": "PASS",
+            "decisionOnFail": "MANUAL_REVIEW",
+            "englishDescription": "Application amount exceeds auto-approval limit.",
+            "frenchDescription": "Le montant de la demande dépasse la limite d’approbation automatique.",
+            "ruleVersion": "2.0.2"
+        }
     ]
   }
 }

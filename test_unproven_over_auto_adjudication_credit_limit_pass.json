@@ -3,6 +3,7 @@
     "creditFacilityLimit": 5000,
     "applicationDecisionSubmissions": 0,
     "connectionAutoApprovalExposure": 5000,
+    "decisionEngineStrategy": "INTERNAL_INPUT_FINANCING",
     "businessPartners": [
       {
         "businessPartnerId": "29d335be-5304-4dc8-9a12-3aaecfca0bb6",
