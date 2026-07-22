@@ -3,7 +3,6 @@
     "creditFacilityLimit": 5000,
     "applicationDecisionSubmissions": 0,
     "connectionAutoApprovalExposure": 5000,
-    "decisionEngineStrategy": "INTERNAL_INPUT_FINANCING",
     "businessPartners": [
       {
         "businessPartnerId": "10000000-0000-0000-0000-000000000001",
@@ -70,7 +69,7 @@
         "transUnionAttributeGO14": 0, "transUnionAttributeAT01": 0, "transUnionAttributeAI01": 0,
         "transUnionAttributeBC01": 1, "transUnionAttributeBR01": 1, "transUnionAttributeBR02": 1,
         "transUnionAttributeAM02": 1, "transUnionAttributeFR01": 1, "transUnionAttributeGO05": 1,
-        "transUnionAttributeRE01": 1, "transUnionAttributeGO86": 0, "transUnionAttributeCU305": false,
+        "transUnionAttributeRE01": 1, "transUnionAttributeGO86": 0, "transUnionAttributeCU305": null,
         "equifaxCDS2AttributeClass": null, "equifaxCDS2AttributeChargeOffCount": null,
         "equifaxCDS2AttributeCollectionAmount": null, "equifaxCDS2AttributeLegalSuitAmount": null,
         "equifaxCDS2AttributeJudgementAmount": null, "equifaxCDS2AttributeCr90Period3DelinquencyAmount": null
